@@ -14,7 +14,7 @@ for f in *.(png)(N); do cwebp -q 4 ${f} -o ${f%%.*}.webp; done
 
 for f in *.(png)(N); do ffmpeg -i ${f} -qscale:v 8 ${f%%.*}.jpg; done
 
-for d in *; do ( cd $d && (for f in *.(png)(N); do cwebp -q 0 ${f} -o ${f%%.*}.webp; done)) done
+for d in *; do ( cd $d && (for f in *.(png)(N); do cwebp -q 4 ${f} -o ${f%%.*}.webp; done)) done
 
 for d in *; do ( cd $d && (for f in *.(png)(N); do ffmpeg -i ${f} -qscale:v 8 ${f%%.*}.jpg; done)) done
 
