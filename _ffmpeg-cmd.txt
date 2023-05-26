@@ -10,7 +10,7 @@ cwebp -q 0 adolfbusch-0.png -o adolfbusch-0-q0.webp
 ffmpeg -i adolfbusch-0.png -qscale:v 8 adolfbusch-0.jpg
 ffmpeg -i adolfbusch-0.jpg -loglevel debug
 
-for f in *.(png)(N); do cwebp -q 0 ${f} -o ${f%%.*}.webp; done
+for f in *.(png)(N); do cwebp -q 4 ${f} -o ${f%%.*}.webp; done
 
 for f in *.(png)(N); do ffmpeg -i ${f} -qscale:v 8 ${f%%.*}.jpg; done
 
